@@ -1,0 +1,8 @@
+imports:
+- path: vm_template.py
+
+resources:
+- name: demo-vm-templated
+  type: vm_template.py
+  properties:
+    zone: us-central1-a

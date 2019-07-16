@@ -1,12 +1,12 @@
 provider "google" {
-  project = "{{YOUR GCP PROJECT}}"
-  region  = "us-central1"
-  zone    = "us-central1-c"
+  project = "benchsci-sandbox"
+  region  = "us-east4"
+  zone    = "us-east4-a"
 }
 
 resource "google_compute_instance" "vm_instance" {
   name         = "terraform-instance"
-  machine_type = "f1-micro"
+  machine_type = var.machine_type
 
   boot_disk {
     initialize_params {
